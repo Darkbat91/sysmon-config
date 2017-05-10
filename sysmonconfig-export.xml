@@ -146,6 +146,10 @@
 			<ParentImage condition="end with">C:\Program Files (x86)\Dropbox\Update\DropboxUpdate.exe</ParentImage>
 			<!--SECTION: Dell-->
 			<ParentImage condition="image">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</ParentImage> <!--Dell:CommandUpdate: Detection process-->
+			<!-- SECTION: McAfee -->
+			<Image condition="begin with">C:\Program Files (x86)\McAfee\Common Framework</Image> <!-- McAfee:Framework Stops all framework actions from reporting  -->
+			<ParentImage condition="Image">C:\Program Files (x86)\McAfee\Common Framework\naPrdMgr.exe</ParentImage>  <!-- McAfee:Scans Stops engine and scans from reporting -->			
+			<ParentImage condition="Image">C:\Program Files\McAfee\Host Intrusion Prevention\FireSvc.exe</ParentImage><!-- McAfee:Scans Stops HIPS from reporting -->			
 		</ProcessCreate>
 
 	<!--SYSMON EVENT ID 2 : FILE CREATION TIME RETROACTIVELY CHANGED IN THE FILESYSTEM-->
