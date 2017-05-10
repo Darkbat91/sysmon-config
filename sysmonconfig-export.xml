@@ -41,6 +41,7 @@
 			<!-- SECTION: McAfee -->
 			<Image condition="begin with">C:\Program Files (x86)\McAfee\Common Framework</Image> <!-- McAfee:Framework Stops all framework actions from reporting -->
 			<ParentImage condition="Image">C:\Program Files (x86)\McAfee\Common Framework\naPrdMgr.exe</ParentImage> <!-- McAfee:Scans Stops engine and scans from reporting-->
+			<ParentImage condition="Image">C:\Program Files\McAfee\Host Intrusion Prevention\FireSvc.exe</ParentImage> <!-- McAfee:Stops all HIPS alerts from reporting on self-->
 		</ProcessCreate>
 
 
